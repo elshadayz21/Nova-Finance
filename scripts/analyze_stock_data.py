@@ -30,21 +30,20 @@ def analyze_stock_data(file_path):
     plt.figure(figsize=(14, 7))
 
     # Plot Close price and SMA
-    plt.subplot(2, 1, 1)
+    plt.subplot(2, 1, 1) # 2 rows, 1 column, first subplot
     plt.plot(df['Close'], label='Close Price')
     plt.plot(df['SMA'], label='20-Day SMA', color='orange')
     plt.title('Close Price and 20-Day SMA')
     plt.legend()
 
     # Plot RSI
-    plt.subplot(2, 1, 2)
+    plt.subplot(2, 1, 2) # 2 rows, 1 column, second subplot
     plt.plot(df['RSI'], label='RSI', color='red')
-    plt.axhline(70, linestyle='--', color='gray')
-    plt.axhline(30, linestyle='--', color='gray')
+    plt.axhline(70, linestyle='--', color='gray') # Overbought threshold
+    plt.axhline(30, linestyle='--', color='gray') # Oversold threshold
     plt.title('Relative Strength Index (RSI)')
     plt.legend()
 
     plt.tight_layout()
     plt.show()
 
-# Example usage
