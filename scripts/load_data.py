@@ -1,5 +1,5 @@
 import pandas as pd
-from scripts.convert_and_align_date import convert_and_align_dates
+from .convert_and_align_date import convert_and_align_dates
 
 def load_data(news, stock):
     news_path = news
